@@ -1,6 +1,6 @@
 {
   "name": "weak-id",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A utility to generate unique ids for weak references",
   "author": "Andrea Giammarchi",
   "license": "MIT",
@@ -22,5 +22,14 @@
     "build": "npm run test",
     "coverage": "mkdir -p ./coverage; c8 report --reporter=text-lcov > ./coverage/lcov.info",
     "test": "c8 node --expose-gc test.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/weak-id.git"
+  },
+  "keywords": ["weak", "id", "reference", "finalization", "registry"],
+  "bugs": {
+    "url": "https://github.com/WebReflection/weak-id/issues"
+  },
+  "homepage": "https://github.com/WebReflection/weak-id#readme"
 }
