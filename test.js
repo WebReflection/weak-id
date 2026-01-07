@@ -1,5 +1,10 @@
 import weakID from './index.js';
 
+import i32 from './i32.js';
+const next = i32(42);
+console.assert(next() === 42);
+console.assert(next() === 43);
+
 const collected = [];
 const wid = weakID(id => {
   collected.push(id);
@@ -26,3 +31,4 @@ setTimeout(() => {
     }, 100);
   }, 100);
 }, 100);
+

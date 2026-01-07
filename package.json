@@ -8,7 +8,9 @@
   "module": "./index.js",
   "main": "./index.js",
   "exports": {
-    ".": "./index.js"
+    ".": "./index.js",
+    "./i32": "./i32.js",
+    "./package.json": "./package.json"
   },
   "files": [
     "index.js",

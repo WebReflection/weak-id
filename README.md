@@ -23,3 +23,18 @@ console.assert(!wid(obj)[1]);
 obj = null;
 // the log will happen
 ```
+
+To have a reliable `i32` value and ensure the next `id` will be actually a *32bit integer*, you can also directly import the `i32` variant:
+
+```js
+import i32 from 'weak-id/i32';
+
+// initialize a function that
+// will always return a 32bit integer
+const next = i32();
+// i32(42) to start from 42 as initial value
+
+console.assert(next() === 0);
+console.assert(next() === 1);
+// ...
+```

@@ -1,5 +1,7 @@
 // @ts-check
 
+import i32 from './i32.js';
+
 /**
  * @param {(id: number) => void} [finalizationCallback]
  */
@@ -9,9 +11,9 @@ export default finalizationCallback => {
     finalizationCallback?.(id);
   });
 
-  const i = new Int32Array(1);
   const wm = new WeakMap;
   const ids = new Set;
+  const next = i32();
 
   /**
    * Given a reference, return its unique id and whether it was unknown.
@@ -29,7 +31,7 @@ export default finalizationCallback => {
       // forever i++ that will stop working at Number.MAX_SAFE_INTEGER;
       // in the best/common case scenario, this is a unique increment.
       /* c8 ignore next */
-      while (ids.has((id = i[0]++)));
+      while (ids.has((id = next())));
       ids.add(id);
       wm.set(value, id);
       fr.register(value, id);
