@@ -1,6 +1,6 @@
 // @ts-check
 
-import i32 from './i32.js';
+import i32 from '@webreflection/utils/id';
 
 /**
  * @param {(id: number) => void} [finalizationCallback]

@@ -19,7 +19,7 @@
     "LICENSE"
   ],
   "devDependencies": {
-    "c8": "^10.1.3"
+    "c8": "^11.0.0"
   },
   "scripts": {
     "build": "npm run test",
@@ -40,5 +40,13 @@
   "bugs": {
     "url": "https://github.com/WebReflection/weak-id/issues"
   },
-  "homepage": "https://github.com/WebReflection/weak-id#readme"
+  "homepage": "https://github.com/WebReflection/weak-id#readme",
+  "overrides": {
+    "c8": {
+      "yargs": "^18.0.0"
+    }
+  },
+  "dependencies": {
+    "@webreflection/utils": "^0.3.6"
+  }
 }
